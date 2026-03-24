@@ -241,6 +241,11 @@
                 <label>18. Any additional comments?</label>
                 <textarea name="comments" placeholder="Enter your comments here..."></textarea>
             </div>
+            <div class="pager" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                <button type="button" id="prevPage" style="padding:8px 16px;border:none;background:#ccc;border-radius:4px;cursor:pointer;">Previous</button>
+                <span id="pageInfo" style="font-size:0.95rem;color:#333;"></span>
+                <button type="button" id="nextPage" style="padding:8px 16px;border:none;background:#ccc;border-radius:4px;cursor:pointer;">Next</button>
+            </div>
             <button type="submit">Submit Survey</button>
         </form>
     </div>
@@ -269,13 +274,48 @@
                 evt.preventDefault();
                 participantNotice.textContent = 'Participant ID is required. Please open the survey with ?participant=your-id';
                 participantNotice.style.color = 'red';
-                participantNotice.focus && participantNotice.focus();
                 return false;
             }
             return true;
         });
 
-        // Optionally preserve the URL for sharing if needed by having the link created dynamically.
+        // pagination for questions: 6 per page
+        var questions = Array.from(document.querySelectorAll('.question'));
+        var pageInfo = document.getElementById('pageInfo');
+        var prevPageBtn = document.getElementById('prevPage');
+        var nextPageBtn = document.getElementById('nextPage');
+        var pageSize = 6;
+        var totalPages = Math.ceil(questions.length / pageSize);
+        var currentPage = parseInt(getQueryParam('page'), 10) || 1;
+        currentPage = Math.min(Math.max(currentPage, 1), totalPages);
+
+        function showPage(page) {
+            questions.forEach(function (q, index) {
+                var pageIndex = Math.floor(index / pageSize) + 1;
+                q.style.display = pageIndex === page ? 'block' : 'none';
+            });
+            pageInfo.textContent = 'Page ' + page + ' / ' + totalPages;
+            prevPageBtn.disabled = page <= 1;
+            nextPageBtn.disabled = page >= totalPages;
+        }
+
+        prevPageBtn.addEventListener('click', function () {
+            if (currentPage > 1) {
+                currentPage -= 1;
+                showPage(currentPage);
+            }
+        });
+
+        nextPageBtn.addEventListener('click', function () {
+            if (currentPage < totalPages) {
+                currentPage += 1;
+                showPage(currentPage);
+            }
+        });
+
+        showPage(currentPage);
+
+        // shareable URL helper
         function buildParticipantLink(participantId) {
             var base = window.location.origin + window.location.pathname;
             return base + '?participant=' + encodeURIComponent(participantId);
