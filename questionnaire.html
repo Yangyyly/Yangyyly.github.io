@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Survey Questionnaire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #007bff;
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .option {
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Satisfaction Survey</h1>
+        <form action="https://formspree.io/f/mreynrep" method="POST">
+            <div class="question">
+                <label>1. How satisfied are you with our product quality?</label>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q1" value="Very Satisfied"> Very Satisfied</div>
+                    <div class="option"><input type="radio" name="q1" value="Satisfied"> Satisfied</div>
+                    <div class="option"><input type="radio" name="q1" value="Neutral"> Neutral</div>
+                    <div class="option"><input type="radio" name="q1" value="Dissatisfied"> Dissatisfied</div>
+                    <div class="option"><input type="radio" name="q1" value="Very Dissatisfied"> Very Dissatisfied</div>
+                </div>
+            </div>
+            <div class="question">
+                <label>2. How satisfied are you with our customer service?</label>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q2" value="Very Satisfied"> Very Satisfied</div>
+                    <div class="option"><input type="radio" name="q2" value="Satisfied"> Satisfied</div>
+                    <div class="option"><input type="radio" name="q2" value="Neutral"> Neutral</div>
+                    <div class="option"><input type="radio" name="q2" value="Dissatisfied"> Dissatisfied</div>
+                    <div class="option"><input type="radio" name="q2" value="Very Dissatisfied"> Very Dissatisfied</div>
+                </div>
+            </div>
+            <div class="question">
+                <label>3. How likely are you to recommend us to a friend?</label>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q3" value="Very Satisfied"> Very Satisfied</div>
+                    <div class="option"><input type="radio" name="q3" value="Satisfied"> Satisfied</div>
+                    <div class="option"><input type="radio" name="q3" value="Neutral"> Neutral</div>
+                    <div class="option"><input type="radio" name="q3" value="Dissatisfied"> Dissatisfied</div>
+                    <div class="option"><input type="radio" name="q3" value="Very Dissatisfied"> Very Dissatisfied</div>
+                </div>
+            </div>
+            <div class="question">
+                <label>4. How satisfied are you with our pricing?</label>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q4" value="Very Satisfied"> Very Satisfied</div>
+                    <div class="option"><input type="radio" name="q4" value="Satisfied"> Satisfied</div>
+                    <div class="option"><input type="radio" name="q4" value="Neutral"> Neutral</div>
+                    <div class="option"><input type="radio" name="q4" value="Dissatisfied"> Dissatisfied</div>
+                    <div class="option"><input type="radio" name="q4" value="Very Dissatisfied"> Very Dissatisfied</div>
+                </div>
+            </div>
+            <div class="question">
+                <label>5. How satisfied are you with our delivery time?</label>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q5" value="Very Satisfied"> Very Satisfied</div>
+                    <div class="option"><input type="radio" name="q5" value="Satisfied"> Satisfied</div>
+                    <div class="option"><input type="radio" name="q5" value="Neutral"> Neutral</div>
+                    <div class="option"><input type="radio" name="q5" value="Dissatisfied"> Dissatisfied</div>
+                    <div class="option"><input type="radio" name="q5" value="Very Dissatisfied"> Very Dissatisfied</div>
+                </div>
+            </div>
+            <div class="question">
+                <label>6. How satisfied are you with our website usability?</label>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q6" value="Very Satisfied"> Very Satisfied</div>
+                    <div class="option"><input type="radio" name="q6" value="Satisfied"> Satisfied</div>
+                    <div class="option"><input type="radio" name="q6" value="Neutral"> Neutral</div>
+                    <div class="option"><input type="radio" name="q6" value="Dissatisfied"> Dissatisfied</div>
+                    <div class="option"><input type="radio" name="q6" value="Very Dissatisfied"> Very Dissatisfied</div>
+                </div>
+            </div>
+            <div class="question">
+                <label>7. How satisfied are you with our return policy?</label>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q7" value="Very Satisfied"> Very Satisfied</div>
+                    <div class="option"><input type="radio" name="q7" value="Satisfied"> Satisfied</div>
+                    <div class="option"><input type="radio" name="q7" value="Neutral"> Neutral</div>
+                    <div class="option"><input type="radio" name="q7" value="Dissatisfied"> Dissatisfied</div>
+                    <div class="option"><input type="radio" name="q7" value="Very Dissatisfied"> Very Dissatisfied</div>
+                </div>
+            </div>
+            <div class="question">
+                <label>8. How satisfied are you with our product variety?</label>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q8" value="Very Satisfied"> Very Satisfied</div>
+                    <div class="option"><input type="radio" name="q8" value="Satisfied"> Satisfied</div>
+                    <div class="option"><input type="radio" name="q8" value="Neutral"> Neutral</div>
+                    <div class="option"><input type="radio" name="q8" value="Dissatisfied"> Dissatisfied</div>
+                    <div class="option"><input type="radio" name="q8" value="Very Dissatisfied"> Very Dissatisfied</div>
+                </div>
+            </div>
+            <div class="question">
+                <label>9. How satisfied are you with our communication?</label>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q9" value="Very Satisfied"> Very Satisfied</div>
+                    <div class="option"><input type="radio" name="q9" value="Satisfied"> Satisfied</div>
+                    <div class="option"><input type="radio" name="q9" value="Neutral"> Neutral</div>
+                    <div class="option"><input type="radio" name="q9" value="Dissatisfied"> Dissatisfied</div>
+                    <div class="option"><input type="radio" name="q9" value="Very Dissatisfied"> Very Dissatisfied</div>
+                </div>
+            </div>
+            <div class="question">
+                <label>10. How satisfied are you with our innovation?</label>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q10" value="Very Satisfied"> Very Satisfied</div>
+                    <div class="option"><input type="radio" name="q10" value="Satisfied"> Satisfied</div>
+                    <div class="option"><input type="radio" name="q10" value="Neutral"> Neutral</div>
+                    <div class="option"><input type="radio" name="q10" value="Dissatisfied"> Dissatisfied</div>
+                    <div class="option"><input type="radio" name="q10" value="Very Dissatisfied"> Very Dissatisfied</div>
+                </div>
+            </div>
+            <div class="question">
+                <label>11. How satisfied are you with our reliability?</label>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q11" value="Very Satisfied"> Very Satisfied</div>
+                    <div class="option"><input type="radio" name="q11" value="Satisfied"> Satisfied</div>
+                    <div class="option"><input type="radio" name="q11" value="Neutral"> Neutral</div>
+                    <div class="option"><input type="radio" name="q11" value="Dissatisfied"> Dissatisfied</div>
+                    <div class="option"><input type="radio" name="q11" value="Very Dissatisfied"> Very Dissatisfied</div>
+                </div>
+            </div>
+            <div class="question">
+                <label>12. How satisfied are you with our value for money?</label>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q12" value="Very Satisfied"> Very Satisfied</div>
+                    <div class="option"><input type="radio" name="q12" value="Satisfied"> Satisfied</div>
+                    <div class="option"><input type="radio" name="q12" value="Neutral"> Neutral</div>
+                    <div class="option"><input type="radio" name="q12" value="Dissatisfied"> Dissatisfied</div>
+                    <div class="option"><input type="radio" name="q12" value="Very Dissatisfied"> Very Dissatisfied</div>
+                </div>
+            </div>
+            <div class="question">
+                <label>13. How satisfied are you with our after-sales support?</label>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q13" value="Very Satisfied"> Very Satisfied</div>
+                    <div class="option"><input type="radio" name="q13" value="Satisfied"> Satisfied</div>
+                    <div class="option"><input type="radio" name="q13" value="Neutral"> Neutral</div>
+                    <div class="option"><input type="radio" name="q13" value="Dissatisfied"> Dissatisfied</div>
+                    <div class="option"><input type="radio" name="q13" value="Very Dissatisfied"> Very Dissatisfied</div>
+                </div>
+            </div>
+            <div class="question">
+                <label>14. How satisfied are you with our responsiveness?</label>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q14" value="Very Satisfied"> Very Satisfied</div>
+                    <div class="option"><input type="radio" name="q14" value="Satisfied"> Satisfied</div>
+                    <div class="option"><input type="radio" name="q14" value="Neutral"> Neutral</div>
+                    <div class="option"><input type="radio" name="q14" value="Dissatisfied"> Dissatisfied</div>
+                    <div class="option"><input type="radio" name="q14" value="Very Dissatisfied"> Very Dissatisfied</div>
+                </div>
+            </div>
+            <div class="question">
+                <label>15. How satisfied are you with our professionalism?</label>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q15" value="Very Satisfied"> Very Satisfied</div>
+                    <div class="option"><input type="radio" name="q15" value="Satisfied"> Satisfied</div>
+                    <div class="option"><input type="radio" name="q15" value="Neutral"> Neutral</div>
+                    <div class="option"><input type="radio" name="q15" value="Dissatisfied"> Dissatisfied</div>
+                    <div class="option"><input type="radio" name="q15" value="Very Dissatisfied"> Very Dissatisfied</div>
+                </div>
+            </div>
+            <div class="question">
+                <label>16. How satisfied are you with our overall experience?</label>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q16" value="Very Satisfied"> Very Satisfied</div>
+                    <div class="option"><input type="radio" name="q16" value="Satisfied"> Satisfied</div>
+                    <div class="option"><input type="radio" name="q16" value="Neutral"> Neutral</div>
+                    <div class="option"><input type="radio" name="q16" value="Dissatisfied"> Dissatisfied</div>
+                    <div class="option"><input type="radio" name="q16" value="Very Dissatisfied"> Very Dissatisfied</div>
+                </div>
+            </div>
+            <div class="question">
+                <label>17. Would you purchase from us again?</label>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q17" value="Yes"> Yes</div>
+                    <div class="option"><input type="radio" name="q17" value="No"> No</div>
+                    <div class="option"><input type="radio" name="q17" value="Maybe"> Maybe</div>
+                </div>
+            </div>
+            <div class="question">
+                <label>18. Any additional comments?</label>
+                <textarea name="comments" placeholder="Enter your comments here..."></textarea>
+            </div>
+            <button type="submit">Submit Survey</button>
+        </form>
+    </div>
+</body>
+</html>
