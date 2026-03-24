@@ -61,6 +61,23 @@
         button:hover {
             background-color: #0056b3;
         }
+        .pager-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 16px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .pager-button:hover:not(:disabled) {
+            background-color: #0056b3;
+        }
+        .pager-button:disabled {
+            background-color: #cccccc;
+            color: #666666;
+            cursor: not-allowed;
+        }
     </style>
 </head>
 <body>
@@ -242,9 +259,9 @@
                 <textarea name="comments" placeholder="Enter your comments here..."></textarea>
             </div>
             <div class="pager" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-                <button type="button" id="prevPage" style="padding:8px 16px;border:none;background:#ccc;border-radius:4px;cursor:pointer;">Previous</button>
+                <button type="button" id="prevPage" class="pager-button">Previous</button>
                 <span id="pageInfo" style="font-size:0.95rem;color:#333;"></span>
-                <button type="button" id="nextPage" style="padding:8px 16px;border:none;background:#ccc;border-radius:4px;cursor:pointer;">Next</button>
+                <button type="button" id="nextPage" class="pager-button">Next</button>
             </div>
             <button type="submit">Submit Survey</button>
         </form>
